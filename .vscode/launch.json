@@ -1,0 +1,14 @@
+{
+	"configurations": [
+		{
+			"type": "java",
+			"name": "Spring Boot-BookstoreapiApplication<bookstoreapi>",
+			"request": "launch",
+			"cwd": "${workspaceFolder}",
+			"mainClass": "com.hampcode.bookstoreapi.BookstoreapiApplication",
+			"projectName": "bookstoreapi",
+			"args": "",
+			"envFile": "${workspaceFolder}/.env"
+		}
+	]
+}

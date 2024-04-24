@@ -1,0 +1,8 @@
+GET http://localhost:8080/api/v1/authors
+########
+POST http://localhost:8080/api/v1/authors
+Content-Type: application/json
+
+{
+    "name":"Pablo Marmol"
+}
