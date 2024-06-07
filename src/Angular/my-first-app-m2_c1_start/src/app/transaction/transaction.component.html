@@ -1,0 +1,72 @@
+<form [formGroup]="formGroup" (ngSubmit)="submitTransfer()">
+    <label for="">Beneficiario</label>
+    <input formControlName="beneficiaryName">
+    <p *ngIf="beneficiaryNameField.invalid && beneficiaryNameField.dirty">
+        El nombre del beneficiario es obligatorio de
+    </p>
+
+    <br>
+    <label for="">Numero de Cuenta</label>
+    <input formControlName="accountNumber">
+    <p *ngIf="accountNumberField.invalid && accountNumberField.touched">
+        <ng-container *ngIf="accountNumberField.hasError('required')">El número de cuenta es obligatorio.</ng-container>
+        <ng-container *ngIf="accountNumberField.hasError('invalidAccountNumber') && 
+                !accountNumberField.hasError('required')">El número de cuenta debe tener exactamente 10 dígitos.
+        </ng-container>
+    </p>
+
+    <br>
+    <label for="">Monto</label>
+    <input formControlName="amount">
+    <p *ngIf="amountField.invalid && amountField.touched">
+        <ng-container *ngIf="amountField.hasError('required')">El monto es obligatorio.</ng-container>
+        <ng-container *ngIf="amountField.hasError('invalidAmount') && 
+                !amountField.hasError('required')">El monto no puede ser negativo o igual a cero
+        </ng-container>
+    </p>
+
+    <button type="submit" [disabled]="!formGroup.valid">Transferir</button>
+
+    <h1>{{formGroup.value | json}}</h1>
+
+
+    <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+      
+
+      <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Fill form field</mat-label>
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Outline form field</mat-label>
+          <input matInput placeholder="Placeholder">
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+      </p>
+      
+
+</form>

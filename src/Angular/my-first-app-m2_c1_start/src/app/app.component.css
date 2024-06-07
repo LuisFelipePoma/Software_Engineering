@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+app-card {
+  flex: 0 0 calc(30% - 20px); /* Ancho del card con margen */
+  margin-bottom: 20px;
+  margin-right: 20px; /* Agregamos un margen derecho */
+}
+
+app-card:last-child {
+  margin-right: 0; /* Eliminamos el margen derecho del último card */
+}
+
+@media screen and (max-width: 768px) {
+  app-card {
+    flex: 0 0 calc(45% - 20px); /* Ancho del card con margen para dispositivos móviles */
+    margin-bottom: 20px;
+    margin-right: 20px; /* Agregamos un margen derecho */
+  }
+
+  app-card:last-child {
+    margin-right: 0; /* Eliminamos el margen derecho del último card en dispositivos móviles */
+  }
+}

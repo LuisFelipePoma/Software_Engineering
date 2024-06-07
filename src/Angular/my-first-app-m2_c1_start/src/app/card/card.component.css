@@ -1,0 +1,60 @@
+.card {
+  background-color: #f4f4f4; /* Fondo gris claro */
+  border-radius: 8px;
+  padding: 16px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333; /* Texto oscuro */
+}
+
+.card p {
+  font-size: 14px;
+  color: #666; /* Texto gris */
+}
+
+.card img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.card-content {
+  text-align: center;
+}
+
+
+.card button {
+  background-color: #2ecc71; /* Verde fresco */
+  color: #ffffff; /* Texto blanco */
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card button:hover {
+  background-color: #27ae60; /* Verde más oscuro al pasar el mouse */
+}
+
+
+
+
+.card-content input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.card-content input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+}

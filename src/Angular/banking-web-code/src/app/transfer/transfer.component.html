@@ -1,0 +1,35 @@
+<div class="container">
+	<h2>Historial de Transferencias</h2>
+	<div class="filter-container">
+    	<button mat-raised-button color="primary" routerLink="/transfer/create-transfer">
+        	Nueva Transferencia
+    	</button>
+	</div>
+	<mat-table [dataSource]="dataSource">
+  	<!-- Definir las columnas de la tabla -->
+  	<ng-container matColumnDef="id">
+    	<mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+        <mat-cell *matCellDef="let transfer"> {{ transfer.id }} </mat-cell>
+        
+  	</ng-container>
+ 
+  	<ng-container matColumnDef="accountNumber">
+    	<mat-header-cell *matHeaderCellDef> Numero de Cuenta Destino </mat-header-cell>
+        <mat-cell *matCellDef="let transfer"> {{ transfer.targetAccount.accountNumber}} </mat-cell>  	 
+  	</ng-container>
+ 
+    <ng-container matColumnDef="amount">
+        <mat-header-cell *matHeaderCellDef> Monto </mat-header-cell>
+        <mat-cell *matCellDef="let transfer"> {{ transfer.amount }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+        <mat-header-cell *matHeaderCellDef> Descripción </mat-header-cell>
+        <mat-cell *matCellDef="let transfer"> {{ transfer.description }} </mat-cell>
+    </ng-container>
+ 
+  	<!-- Agregar más columnas según tus necesidades --> 
+  	<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  	<mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+	</mat-table>
+  </div>

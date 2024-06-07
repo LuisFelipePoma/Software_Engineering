@@ -1,0 +1,48 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+  }
+ 
+  h2 {
+	margin-bottom: 20px;
+  }
+ 
+  .container-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+  }
+ 
+  .mat-form-field {
+	flex: 1 1 auto;
+	width: auto;
+  }
+ 
+  button {
+	flex: 0 0 auto;
+  }
+ 
+  .no-data-message {
+	margin-top: 10px;
+	color: red;
+	font-weight: bold;
+  }
+ 
+  .filter-container {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+  }
+ 
+  .filter-container button:first-child {
+	margin-right: 10px;
+  }
+ 
+  .filter-container button:last-child {
+	margin-left: 10px;
+  }
+ 
+
