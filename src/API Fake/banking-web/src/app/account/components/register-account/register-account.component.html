@@ -1,0 +1,40 @@
+<div class="container py-5">
+    <h1 class="fw-bold text-center">Registro de Cuenta Bancaria</h1>
+
+    <div class="row justify-content-center my-5">
+        <div class="col-md-6 col-lg-4">
+            <form class="mt-5" autocomplete="off" [formGroup]="form" (ngSubmit)="onSubmit()">
+                <mat-form-field class="mb-2 w-100" appearance="outline">
+                    <mat-label>Número de Cuenta</mat-label>
+                    <input matInput formControlName="accountNumber" placeholder="Ingrese el número de cuenta">   
+                    <mat-error *ngIf="controlHasError('accountNumber', 'required')">
+                        Este campo es obligatorio
+                    </mat-error>                
+                    <mat-error *ngIf="controlHasError('accountNumber', 'invalidAccountNumber') && !controlHasError('accountNumber', 'required')">
+                       El numero de cuenta debe tener 10 digitos
+                    </mat-error>   
+                </mat-form-field>
+
+                <mat-form-field class="mb-2 w-100" appearance="outline">
+                    <mat-label>Saldo</mat-label>
+                    <input matInput formControlName="balance" placeholder="Ingrese el saldo">
+                    <mat-error *ngIf="controlHasError('balance', 'required')">
+                        Este campo es obligatorio
+                    </mat-error>
+                    <mat-error *ngIf="controlHasError('balance', 'invalidAmount') && !controlHasError('balance', 'required')">
+                       El monto no puede ser negativo o igual a cero 
+                    </mat-error>
+                </mat-form-field>
+
+                <div class="button-container">
+                    <button mat-raised-button color="accent" type="button" routerLink="/account">
+                        Cancelar
+                    </button>
+                    <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">
+                        Registrar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

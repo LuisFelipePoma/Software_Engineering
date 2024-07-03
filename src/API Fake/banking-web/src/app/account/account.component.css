@@ -1,0 +1,86 @@
+/* Estilos generales para el contenedor principal */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+  /* Estilos para el encabezado principal */
+  h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  /* Estilos para los controles de encabezado */
+  .header-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para el filtro */
+  .filter {
+    flex: 1;
+    max-width: 400px;
+  }
+  
+  .filter mat-form-field {
+    width: 100%;
+  }
+  
+  /* Estilos para el contenedor del botón */
+  .button-container {
+    margin-left: 20px;
+  }
+  
+  /* Estilos generales para la tabla */
+  .table-container {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Estilos para las celdas y cabeceras de la tabla */
+  mat-header-cell,
+  mat-cell {
+    padding: 16px;
+    text-align: left;
+  }
+  
+  mat-header-cell {
+    background-color: #009739;
+    color: white;
+    font-weight: bold;
+  }
+  
+  mat-row:nth-child(even) {
+    background-color: #f3f3f3;
+  }
+  
+  mat-row:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  
+  mat-cell {
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  /* Estilos para los botones */
+  button[mat-button] {
+    margin: 0 8px;
+    color: white;
+  }
+  
+  button[mat-button].edit-button {
+    background-color: #4caf50;
+  }
+  
+  button[mat-button].delete-button {
+    background-color: #f44336;
+  }
+  

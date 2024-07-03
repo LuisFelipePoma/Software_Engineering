@@ -1,0 +1,56 @@
+<div class="container">
+	<h1 class="fw-bold text-center">Reporte de Viajes</h1>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="card-container">
+				@for (item of tripsReports; track $index) {
+				<div class="card" (click)="getRouteInfo(item.route)">
+					<mat-card>
+						<mat-card-header>
+							<mat-card-title>{{item.route}}</mat-card-title>
+						</mat-card-header>
+						<mat-card-content>
+							<p>Cantidad de viajes: {{item.tripCount}}</p>
+						</mat-card-content>
+					</mat-card>
+				</div>
+				}
+
+			</div>
+		</div>
+
+		<div class="col-md-8">
+
+			<div class="trip-details">
+				<h2 class="fw-bold text-center">Viajes para </h2>
+
+				<div>
+					<table mat-table class="mat-elevation-z8" [dataSource]="dataSource">
+						<ng-container matColumnDef="date">
+							<th mat-header-cell *matHeaderCellDef>Fecha</th>
+							<td mat-cell *matCellDef="let trip">{{trip.date}}</td>
+						</ng-container>
+						<ng-container matColumnDef="time">
+							<th mat-header-cell *matHeaderCellDef>Hora</th>
+							<td mat-cell *matCellDef="let trip">{{trip.time}}</td>
+						</ng-container>
+						<ng-container matColumnDef="origin">
+							<th mat-header-cell *matHeaderCellDef>Origen</th>
+							<td mat-cell *matCellDef="let trip">{{trip.origin}}</td>
+						</ng-container>
+						<ng-container matColumnDef="destination">
+							<th mat-header-cell *matHeaderCellDef>Destino</th>
+							<td mat-cell *matCellDef="let trip">{{trip.destination}}</td>
+						</ng-container>
+
+						<tr mat-header-row *matHeaderRowDef="['date', 'time', 'origin', 'destination']"></tr>
+						<tr mat-row *matRowDef="let row; columns: ['date', 'time', 'origin', 'destination'];"></tr>
+					</table>
+				</div>
+
+			</div>
+
+
+
+		</div>
+	</div>

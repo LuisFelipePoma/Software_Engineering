@@ -1,0 +1,108 @@
+{
+  "trips": [
+    {
+      "id": 1,
+      "date": "2024-07-10",
+      "time": "08:30",
+      "origin": "Estación Central",
+      "destination": "Estación Norte",
+      "route": "Ruta A"
+    },
+    {
+      "id": 2,
+      "date": "2024-07-11",
+      "time": "09:15",
+      "origin": "Estación Este",
+      "destination": "Estación Oeste",
+      "route": "Ruta B"
+    },
+    {
+      "id": 3,
+      "date": "2024-07-12",
+      "time": "07:45",
+      "origin": "Estación Norte",
+      "destination": "Estación Sur",
+      "route": "Ruta A"
+    },
+    {
+      "id": 4,
+      "date": "2024-07-02",
+      "time": "13:24",
+      "origin": "San Borja",
+      "destination": "Monterrico",
+      "route": "Ruta C"
+    },
+    {
+      "id": 5,
+      "date": "2024-07-10",
+      "time": "08:30",
+      "origin": "Estación Central",
+      "destination": "Estación Norte",
+      "route": "Ruta D"
+    },
+    {
+      "id": 6,
+      "date": "2024-07-10",
+      "time": "08:30",
+      "origin": "Estación Central",
+      "destination": "Estación Norte",
+      "route": "Ruta A"
+    },
+    {
+      "id": 7,
+      "date": "2024-07-02",
+      "time": "07:15",
+      "origin": "Angamos",
+      "destination": "Javier Prado",
+      "route": "Ruta C"
+    },
+    {
+      "id": 8,
+      "date": "2024-07-01",
+      "time": "08:30",
+      "origin": "Estación Central",
+      "destination": "Estación Norte",
+      "route": "Ruta D"
+    },
+    {
+      "id": 9,
+      "date": "2024-07-02",
+      "time": "18:10",
+      "origin": "Monterrico",
+      "destination": "Aviacion",
+      "route": "Ruta D"
+    },
+    {
+      "id": 10,
+      "date": "2024-12-01",
+      "time": "12:22",
+      "origin": "Jauja",
+      "destination": "Jauja Alto",
+      "route": "Ruta X"
+    },
+    {
+      "id": 11,
+      "date": "2024-06-10",
+      "time": "11:11",
+      "origin": "Lima",
+      "destination": "Jauja",
+      "route": "Ruta X"
+    },
+    {
+      "id": 12,
+      "date": "2312-12-31",
+      "time": "12:31",
+      "origin": "Ruta Y",
+      "destination": "juaja",
+      "route": "jauaj"
+    },
+    {
+      "id": 13,
+      "date": "3123-12-12",
+      "time": "12:31",
+      "origin": "123123",
+      "destination": "12312",
+      "route": "123"
+    }
+  ]
+}

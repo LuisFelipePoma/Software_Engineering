@@ -1,0 +1,51 @@
+/* Estilo para la barra de herramientas con color verde */
+mat-toolbar {
+    background-color: #009739; /* Color verde similar al del Banco Interbank */
+    color: white; /* Texto blanco para buen contraste */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+
+/* Estilo para los botones */
+mat-toolbar button {
+    margin-left: 16px;
+    color: white; /* Texto blanco para los botones */
+}
+
+/* Estilo para el espacio entre los elementos */
+.spacer {
+    flex: 1 1 auto;
+}
+
+/* Ajuste de márgenes específicos para botones */
+.ms-3 {
+    margin-left: 16px;
+}
+
+/* Estilo para el icono del menú de usuario */
+mat-icon {
+    vertical-align: middle;
+    margin-right: 8px;
+    color: white; /* Icono blanco para buen contraste */
+}
+
+/* Estilo para el botón del menú de usuario */
+button[mat-button] {
+    display: flex;
+    align-items: center;
+    color: black; /* Color de texto del menú de usuario */
+}
+
+/* Opcional: Estilo para los elementos del menú */
+mat-menu {
+    background-color: white; /* Fondo blanco para el menú */
+    color: black; /* Texto negro para buen contraste */
+}
+
+mat-menu button[mat-menu-item] {
+    display: flex;
+    align-items: center;
+    color: black; /* Color de texto de los elementos del menú */
+}

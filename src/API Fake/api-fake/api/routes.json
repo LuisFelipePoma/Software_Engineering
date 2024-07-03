@@ -1,0 +1,6 @@
+{
+    "/api/v1/*": "/$1",
+    "/accounts/customers/:customerId": "/accounts?customerId=:customerId",
+    "/transactions/:id": "/transactions?id=:id"
+  }
+  

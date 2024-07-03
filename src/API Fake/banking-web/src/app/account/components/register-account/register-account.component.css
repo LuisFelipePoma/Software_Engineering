@@ -1,0 +1,128 @@
+/* Estilos generales para la tabla */
+table {
+    width: 100%; /* La tabla ocupará todo el ancho del contenedor */
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para estilizar la tabla */
+    background-color: white; /* Fondo blanco para la tabla */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Esconde los bordes fuera del contenedor */
+}
+
+mat-header-cell, mat-cell {
+    padding: 16px;
+    text-align: left;
+}
+
+/* Estilo para el encabezado de la tabla */
+mat-header-cell {
+    background-color: #009739; /* Color verde similar al del Banco Interbank */
+    color: white;
+    font-weight: bold;
+}
+
+/* Estilo para las filas de la tabla */
+mat-row:nth-child(even) {
+    background-color: #f3f3f3; /* Fondo gris claro para filas pares */
+}
+
+mat-row:nth-child(odd) {
+    background-color: #ffffff; /* Fondo blanco para filas impares */
+}
+
+/* Estilo para las celdas */
+mat-cell {
+    border-bottom: 1px solid #e0e0e0; /* Línea inferior de celda */
+}
+
+button[mat-button] {
+    margin: 0 8px; /* Espaciado entre botones */
+    color: white;
+}
+
+.button-container button {
+    width: 150px; /* Ancho fijo para los botones */
+    margin-right: 16px; /* Espaciado derecho entre botones */
+}
+
+/* Alinear los botones horizontalmente */
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los botones */
+    margin-top: 16px; /* Margen superior para separar botones del formulario */
+}
+
+/* Ajustes generales */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* Estilos para el contenedor del filtro */
+.text-start {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+    width: 100%; /* Ancho completo del contenedor */
+    max-width: 400px; /* Ancho máximo del campo de filtro */
+}
+
+.text-start mat-form-field {
+    width: 100%; /* Ancho completo del campo de entrada */
+}
+
+/* Estilos para el contenedor de la tabla */
+.table-container {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px; /* Espacio entre el botón y la tabla */
+}
+
+/* Estilos para las celdas y cabeceras de la tabla */
+mat-header-cell, mat-cell {
+    padding: 16px;
+    text-align: left;
+}
+
+mat-header-cell {
+    background-color: #009739;
+    color: white;
+    font-weight: bold;
+}
+
+mat-row:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+mat-row:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+mat-cell {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Estilos para los botones */
+button[mat-button] {
+    margin: 0 8px;
+    color: white;
+}
+
+button[mat-button].edit-button {
+    background-color: #4caf50;
+}
+
+button[mat-button].delete-button {
+    background-color: #f44336;
+}
+
+/* Estilos para el título */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 24px;
+}

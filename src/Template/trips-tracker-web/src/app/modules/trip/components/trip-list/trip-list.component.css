@@ -1,0 +1,73 @@
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .filter-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .filters-and-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .mat-form-field {
+    width: calc(50% - 20px);
+    background-color: #fff;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .mat-form-field:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter-button, .new-trip-button {
+    margin-left: 10px;
+    background-color: #fff;
+    color: #d9534f;
+    border: 1px solid #d9534f;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .filter-button:hover, .new-trip-button:hover {
+    background-color: #d9534f;
+    color: #fff;
+  }
+  
+  /* Media queries para diseño responsive */
+  @media (max-width: 992px) {
+    .mat-form-field {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .filters-and-buttons {
+      flex-direction: column;
+    }
+  
+    .filter-button, .new-trip-button {
+      margin-left: 0;
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+  

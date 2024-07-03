@@ -1,0 +1,31 @@
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d50000; 
+  position: fixed; 
+  top: 0;
+  width: 100%; 
+  z-index: 1000;
+  padding: 0 1rem; 
+}
+
+.logo {
+  margin-left: 1rem; 
+}
+
+.menu-items {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem; 
+}
+
+.mat-button {
+  white-space: nowrap;
+}
+
+
+body {
+  padding-top: 64px; 
+}

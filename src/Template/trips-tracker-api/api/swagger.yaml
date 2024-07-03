@@ -1,0 +1,132 @@
+openapi: 3.0.0
+info:
+  title: Public Transport Tracker API
+  description: API para gestionar viajes en transporte público
+  version: 1.0.0
+  contact:
+    name: HampCode
+    url: https://hampcode.com
+    email: support@hampcode.com
+servers:
+  - url: http://localhost:3000/api/v1
+    description: Servidor de desarrollo
+
+paths:
+  /trips:
+    get:
+      summary: Obtener todos los viajes
+      responses:
+        '200':
+          description: Lista de todos los viajes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Trip'
+
+    post:
+      summary: Registrar un nuevo viaje
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Trip'
+      responses:
+        '200':
+          description: Viaje registrado correctamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Trip'
+
+  /trips/filter-by-date:
+    get:
+      summary: Filtrar viajes por fecha
+      parameters:
+        - in: query
+          name: date
+          schema:
+            type: string
+            format: date
+          description: Fecha del viaje para filtrar (ej. 2024-07-10)
+      responses:
+        '200':
+          description: Lista de viajes filtrados por fecha
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Trip'
+
+  /trips/filter-by-route:
+    get:
+      summary: Filtrar viajes por ruta
+      parameters:
+        - in: query
+          name: route
+          schema:
+            type: string
+          description: Ruta del viaje para filtrar (ej. Ruta A)
+      responses:
+        '200':
+          description: Lista de viajes filtrados por ruta
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Trip'
+
+  /trips/stats-by-route:
+    get:
+      summary: Estadísticas por uso de rutas
+      responses:
+        '200':
+          description: Estadísticas de uso de rutas
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TripReport'
+
+components:
+  schemas:
+    Trip:
+      type: object
+      properties:
+        id:
+          type: integer
+        date:
+          type: string
+          format: date
+        time:
+          type: string
+          format: time
+        origin:
+          type: string
+        destination:
+          type: string
+        route:
+          type: string
+      example:
+        id: 1
+        date: 2024-07-10
+        time: "08:30"
+        origin: "Estación Central"
+        destination: "Estación Norte"
+        route: "Ruta A"
+
+    TripReport:
+      type: object
+      properties:
+        route:
+          type: string
+        tripCount:
+          type: integer
+      example:
+        route: "Ruta A"
+        tripCount: 5

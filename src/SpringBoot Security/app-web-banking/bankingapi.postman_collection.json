@@ -1,0 +1,348 @@
+{
+	"info": {
+		"_postman_id": "1818643f-dd32-4026-bc0f-db5cea95eaba",
+		"name": "bankingapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6246033"
+	},
+	"item": [
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "get all accounts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJobWVuZG84MUBnbWFpbC5jb20iLCJyb2xlIjoiUk9MRV9VU0VSIiwiZXhwIjoxNzIwNTYwNzM1fQ.GfJkumWfaCjTx_CBkYUau-j_kdgJ60utlV_7jXb6bGVlTzI1DQguIKGCN9uTNRU7Gpm4MdtIjZrulxBx6_SGHA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/accounts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create new account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\": \"66667097779\",\r\n    \"balance\": 1500.00,\r\n    //\"ownerName\": \"Maria\",\r\n    //\"ownerEmail\": \"maria@example.com\"\r\n    \"customerId\":1\r\n    \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/accounts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update account",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\": \"3464567898\",\r\n    \"balance\": 6500.00,\r\n    \"ownerName\": \"Jane Smith\",\r\n    \"ownerEmail\": \"janesmith@example.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/accounts/8",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"accounts",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete account",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/accounts/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get account by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/accounts/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"accounts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all account by user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJobWVuZG84MUBnbWFpbC5jb20iLCJyb2xlIjoiUk9MRV9VU0VSIiwiZXhwIjoxNzIwNTgwNDU5fQ.W7Z3EhhmXEbqYigv7HY4Kc-K5Il7yUfn4RIW2AAYCoKmXs2OHJsR9bnlfBxZcZeAuIbWZgSNfP64d492wDOs7Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/accounts/user?email=hmendo81@gmail.com",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"accounts",
+								"user"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "hmendo81@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transaction",
+			"item": [
+				{
+					"name": "get all transactions by accountNumber",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/transactions/accounts/66667097778",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"transactions",
+								"accounts",
+								"66667097778"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create new transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sourceAccountNumber\": \"66667097778\",\r\n    \"targetAccountNumber\": \"66667097779\",\r\n    \"amount\": 20.75,\r\n    \"description\": \"Pago de factura\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/transactions",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "report count transactions by range date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/transactions/report?startDate=2024-01-01&endDate=2024-12-31&accountNumber=66667097778",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"transactions",
+								"report"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2024-01-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-12-31"
+								},
+								{
+									"key": "accountNumber",
+									"value": "66667097778"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\":\"Henry Antonio\",\n    \"lastName\":\"Mendoza Puerta\",\n    \"email\": \"hmendo81@gmail.com\",\n    \"password\":\"HolaMundo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/signup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"hmendo81@gmail.com\",\n    \"password\":\"HolaMundo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/token",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080/api/v1",
+			"type": "string"
+		}
+	]
+}

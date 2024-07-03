@@ -1,0 +1,120 @@
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .row {
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+    margin-bottom: 1rem;
+  }
+  
+  .mat-form-field:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mat-form-field input {
+    padding: 8px 12px;
+    border: none;
+    outline: none;
+  }
+  
+  .mat-form-field mat-label {
+    color: #333;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+  }
+  
+  .button-container button {
+    width: 48%; 
+  }
+  
+  .button-container button[color="accent"] {
+    background-color: #6c757d;
+    color: #fff;
+    border: 1px solid #6c757d;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .button-container button[color="accent"]:hover {
+    background-color: #5a6268;
+    border: 1px solid #5a6268;
+  }
+  
+  .button-container button[color="primary"] {
+    background-color: #fff;
+    color: #d9534f;
+    border: 1px solid #d9534f;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .button-container button[color="primary"]:hover {
+    background-color: #d9534f;
+    color: #fff;
+  }
+  
+  .button-container button[color="primary"]:disabled {
+    background-color: #f2f2f2;
+    color: #999;
+    border: 1px solid #ccc;
+    cursor: not-allowed;
+  }
+  
+  .rounded-input {
+    border-radius: 8px;
+  }
+  
+  .rounded-button {
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 992px) {
+    .mat-form-field {
+        min-width: 250px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .container {
+        padding: 10px;
+    }
+  
+    .mat-form-field {
+        min-width: 200px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+  
+    .button-container button {
+        width: 100%;
+    }
+  }
+  

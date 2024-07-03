@@ -1,0 +1,179 @@
+{
+  "accounts": [
+    {
+      "id": 1,
+      "accountNumber": "15345678",
+      "balance": 5000,
+      "customerId": 1
+    },
+    {
+      "id": 2,
+      "accountNumber": "13334678",
+      "balance": 3000,
+      "customerId": 1
+    },
+    {
+      "id": 3,
+      "accountNumber": "13334678",
+      "balance": 5000,
+      "customerId": 1
+    },
+    {
+      "id": 4,
+      "accountNumber": "4567898765",
+      "balance": "2389",
+      "customerId": 1
+    },
+    {
+      "id": 5,
+      "accountNumber": "4567898769",
+      "balance": "2389",
+      "customerId": 1
+    },
+    {
+      "id": 6,
+      "accountNumber": "4567898965",
+      "balance": "2389",
+      "customerId": 1
+    },
+    {
+      "id": 5,
+      "accountNumber": "1234567890",
+      "balance": "2000",
+      "customerId": 2
+    },
+    {
+      "id": 7,
+      "accountNumber": "3434343434",
+      "balance": "40000",
+      "customerId": 1
+    },
+    {
+      "id": 8,
+      "accountNumber": "2345678901",
+      "balance": "123",
+      "customerId": 1
+    },
+    {
+      "id": 9,
+      "accountNumber": "7350009000",
+      "balance": "500",
+      "customerId": 5
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "firstName": "Henry Antonio",
+      "lastName": "Mendoza Puerta",
+      "email": "hmendo81@gmail.com",
+      "password": "password123"
+    },
+    {
+      "id": 2,
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "email": "jane@example.com",
+      "password": "secret"
+    },
+    {
+      "firstName": "Patricia",
+      "lastName": "Mendez Rodriguez",
+      "email": "patricia@example.com",
+      "password": "password123",
+      "id": 3
+    },
+    {
+      "firstName": "Pablo",
+      "lastName": "Marmol Perez",
+      "email": "pablito@gmail.com",
+      "password": "HolaMundo",
+      "id": 4
+    },
+    {
+      "firstName": "Luis Felipe",
+      "lastName": "Poma Astete",
+      "email": "u202110902@upc.edu.pe",
+      "password": "pepito123",
+      "id": 5
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "name": "¿Quien se ha llevado mi queso?",
+      "author": "Spencer Johnson, M.D.",
+      "sinopsis": " Había una vez dos ratoncitos y dos hombrecillos que vivían en un laberinto. Estos cuatro personajes dependían del queso para alimentarse y ser felices. Como habían encontrado una habitación repleta de queso, vivieron durante un tiempo muy contentos. Pero un buen día el queso desapareció... Esta fábula simple e ingeniosa puede aplicarse a todos los ámbitos de la vida. Con palabras y ejemplos comprensibles incluso para un niño, nos enseña que todo cambia, y que las fórmulas que sirvieron en su momento pueden quedar obsoletas. El 'queso' del relato representa cualquier cosa que queramos alcanzar 'la felicidad, el trabajo, el dinero, el amor' y el laberinto es la realidad, con zonas desconocidas y peligrosas, callejones sin salida, oscuros recovecos... y habitaciones llenas de queso. Escrito por un autor de fama internacional, este relato está prologado por un renombrado consultor empresarial. Sus enseñanzas han servido de inspiración en todo tipo de compañías y organizaciones empresariales. ",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51MrP+VVf0L._SX320_BO1,204,203,200_.jpg",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "name": "100 fórmulas para llegar al éxito",
+      "author": "P. Eliecer Salesman",
+      "sinopsis": "En este libro están las fórmulas para ser felices y hacer felices a los demás. Técnicas fáciles para llegar a obtener una gran personalidad y lograr coronar nuestros ideales. ",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51fBrFK1LpL._SX350_BO1,204,203,200_.jpg",
+      "categoryId": 1
+    },
+    {
+      "id": 3,
+      "name": "Fish",
+      "author": " Stephen C. Lundin",
+      "sinopsis": "Nueva edición ampliada del gran éxito mundial. . Libro indispensable para la gestión de equipos. Se trata de una nueva edición de uno de los libros de empresa más importantes del siglo XXI y que se ha convertido en un clásico imprescindible sobre la importancia del trabajo en equipo y la motivación. Además de la historia del libro original sobre el famoso mercado de Pikes Place en Seattle, en esta edición ampliada y reenergizada, los autores han agregado tres breves historias reales más de empresas que han aplicado la filosofía 'Fish!'. De esta forma se puede ver la aplicabilidad de esta forma de gestionar en distintos ámbitos y lugares. Un libro imprescindible para quienes tengan que gestionar personas.",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/41+2iM3JAxL._SX315_BO1,204,203,200_.jpg",
+      "categoryId": 1
+    },
+    {
+      "id": 4,
+      "name": "Nuevo Libro",
+      "author": "Autor Ejemplo",
+      "sinopsis": "Esta es una sinopsis de ejemplo para el nuevo libro.",
+      "image": "https://example.com/imagen-del-libro.jpg",
+      "categoryId": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Crecimiento Personal"
+    },
+    {
+      "id": 2,
+      "name": "Tecnología"
+    },
+    {
+      "id": 3,
+      "name": "Ficciones"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "fromAccount": "15345678",
+      "toAccount": "13334678",
+      "amount": 500,
+      "date": "2024-06-16"
+    },
+    {
+      "id": 2,
+      "fromAccount": "4567898765",
+      "toAccount": "4567898769",
+      "amount": 1000,
+      "date": "2024-06-15"
+    },
+    {
+      "id": 3,
+      "fromAccount": "1234567890",
+      "toAccount": "3434343434",
+      "amount": 15000,
+      "date": "2024-06-14"
+    },
+    {
+      "id": 4,
+      "fromAccount": "1234567890",
+      "toAccount": "3434343434",
+      "amount": 15000,
+      "date": "2024-06-14"
+    }
+  ]
+}

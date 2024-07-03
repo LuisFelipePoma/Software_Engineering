@@ -1,0 +1,35 @@
+/* Asegura que el contenido no quede oculto detrás de la barra de navegación fija */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+main {
+  flex: 1;
+  padding-top: 80px; /* Asegura que el contenido principal no quede oculto */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 100%;
+  margin: 0 auto; 
+  padding: 20px; 
+  padding-top: 120px; /* Ajusta el padding-top para dar más espacio por encima del contenido */
+}

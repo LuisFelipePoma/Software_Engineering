@@ -1,0 +1,58 @@
+<div class="container py-5">
+	<h1 class="fw-bold text-center">Registro de Viaje</h1>
+
+	<div class="row justify-content-center my-5">
+		<div class="col-md-6 col-lg-4">
+			<form class="mt-5" autocomplete="off" [formGroup]="form" (ngSubmit)="register()">
+				<mat-form-field class="mb-2 w-100" appearance="outline">
+					<mat-label>Fecha</mat-label>
+					<input matInput type="date" placeholder="Ingrese fecha" class="rounded-input" formControlName="date">
+					<mat-error *ngIf="controlHasError('date', 'required')">
+						Este campo es obligatorio
+					</mat-error>
+				</mat-form-field>
+
+				<mat-form-field class="mb-2 w-100" appearance="outline">
+					<mat-label>Hora</mat-label>
+					<input matInput type="time" placeholder="Ingrese hora" class="rounded-input" formControlName="time">
+					<mat-error *ngIf="controlHasError('time', 'required')">
+						Este campo es obligatorio
+					</mat-error>
+				</mat-form-field>
+
+				<mat-form-field class="mb-2 w-100" appearance="outline">
+					<mat-label>Origen</mat-label>
+					<input matInput placeholder="Ingrese origen" class="rounded-input" formControlName="origin">
+					<mat-error *ngIf="controlHasError('origin', 'required')">
+						Este campo es obligatorio
+					</mat-error>
+				</mat-form-field>
+
+				<mat-form-field class="mb-2 w-100" appearance="outline">
+					<mat-label>Destino</mat-label>
+					<input matInput placeholder="Ingrese destino" class="rounded-input" formControlName="destination">
+					<mat-error *ngIf="controlHasError('destination', 'required')">
+						Este campo es obligatorio
+					</mat-error>
+				</mat-form-field>
+
+				<mat-form-field class="mb-2 w-100" appearance="outline">
+					<mat-label>Ruta</mat-label>
+					<input matInput placeholder="Ingrese la ruta" class="rounded-input" formControlName="route">
+					<mat-error *ngIf="controlHasError('route', 'required')">
+						Este campo es obligatorio
+					</mat-error>
+				</mat-form-field>
+
+				<div class="button-container">
+					<button mat-raised-button color="accent" type="button" routerLink="/trips" class="rounded-button">
+						Cancelar
+					</button>
+					<button mat-raised-button color="primary" type="submit" class="rounded-button">
+						Registrar
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

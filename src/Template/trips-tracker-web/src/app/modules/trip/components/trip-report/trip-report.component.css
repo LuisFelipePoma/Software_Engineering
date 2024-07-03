@@ -1,0 +1,93 @@
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .card {
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .mat-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mat-card-header {
+    background-color: #f0f0f0;
+    padding: 12px;
+  }
+  
+  .mat-card-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .mat-card-content {
+    padding: 12px;
+  }
+  
+  .mat-card-content p {
+    margin-bottom: 8px;
+  }
+  
+  .no-data {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .trip-details {
+    margin-top: 40px;
+  }
+  
+  .trip-details table {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .card-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .container {
+      padding: 10px; 
+    }
+    
+    .card-container {
+      flex-direction: column;
+    }
+  }
+  
+  /* New styles for selected card */
+  .card.selected {
+    border: 2px solid #d9534f;
+  }
+  
+  .card.selected .mat-card {
+    border-color: #d9534f;
+    box-shadow: 0 0 10px rgba(217, 83, 79, 0.5);
+  }
+  
+  .no-data p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d9534f;
+  }
+  

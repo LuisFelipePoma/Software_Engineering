@@ -1,0 +1,57 @@
+<div class="container py-5">
+  <h1 class="fw-bold text-center">Listado de Cuenta Bancarias</h1>
+
+  <div class="header-controls">
+    <!-- Campo de filtro con estilo similar a Google -->
+    <mat-form-field appearance="fill" class="filter">
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input />
+      <button mat-button matSuffix>
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <!-- Botón para crear cuenta bancaria -->
+    <div class="button-container">
+      <button mat-raised-button color="primary" routerLink="/account/register">
+        Crear cuenta bancaria
+      </button>
+    </div>
+  </div>
+
+  <!-- Tabla de cuentas bancarias -->
+  <div class="table-container">
+    <table mat-table [dataSource]="dataSource">
+      <!-- Definición de columnas -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>Id</th>
+        <td mat-cell *matCellDef="let account">{{ account.id }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="numero">
+        <th mat-header-cell *matHeaderCellDef>Número de cuenta</th>
+        <td mat-cell *matCellDef="let account">{{ account.accountNumber }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="saldo">
+        <th mat-header-cell *matHeaderCellDef>Saldo</th>
+        <td mat-cell *matCellDef="let account">{{ account.balance | currency }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef>Acciones</th>
+        <td mat-cell *matCellDef="let account">
+          <button mat-button class="edit-button">Editar</button>
+          <button mat-button class="delete-button">Eliminar</button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+    <!-- Paginador -->
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
+</div>

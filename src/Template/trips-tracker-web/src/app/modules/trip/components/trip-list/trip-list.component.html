@@ -1,0 +1,51 @@
+<div class="container">
+	<h2 class="mb-4">Filtrar viajes por </h2>
+
+	<div class="filter-container">
+		<div class="filters-and-buttons">
+			<mat-form-field appearance="fill" class="mb-2">
+				<mat-label>Ruta</mat-label>
+				<input matInput [(ngModel)]="route">
+			</mat-form-field>
+
+			<mat-form-field appearance="fill" class="mb-2">
+				<mat-label>Fecha</mat-label>
+				<input matInput type="date" [(ngModel)]="date">
+			</mat-form-field>
+
+			<button mat-raised-button color="primary" class="filter-button" (click)="filter()">Filtrar</button>
+			<button mat-raised-button color="warn" class="filter-button" (click)="clearFilters()">Limpiar Filtros</button>
+			<a mat-raised-button color="accent" class="new-trip-button" routerLink="/trips/add">Nuevo Viaje</a>
+		</div>
+	</div>
+
+	<table mat-table class="mat-elevation-z8" [dataSource]="dataSource">
+		<ng-container matColumnDef="date">
+			<th mat-header-cell *matHeaderCellDef>Fecha</th>
+			<td mat-cell *matCellDef="let trip">{{trip.date}}</td>
+		</ng-container>
+
+		<ng-container matColumnDef="time">
+			<th mat-header-cell *matHeaderCellDef>Hora</th>
+			<td mat-cell *matCellDef="let trip">{{trip.time}}</td>
+		</ng-container>
+
+		<ng-container matColumnDef="origin">
+			<th mat-header-cell *matHeaderCellDef>Origen</th>
+			<td mat-cell *matCellDef="let trip">{{trip.origin}}</td>
+		</ng-container>
+
+		<ng-container matColumnDef="destination">
+			<th mat-header-cell *matHeaderCellDef>Destino</th>
+			<td mat-cell *matCellDef="let trip">{{trip.destination}}</td>
+		</ng-container>
+
+		<ng-container matColumnDef="route">
+			<th mat-header-cell *matHeaderCellDef>Ruta</th>
+			<td mat-cell *matCellDef="let trip">{{trip.route}}</td>
+		</ng-container>
+
+		<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+		<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+	</table>
+</div>

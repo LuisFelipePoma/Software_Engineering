@@ -1,0 +1,27 @@
+<div class="container py-5">
+    <h1 class="fw-bold text-center">Detalles de la Transacción</h1>
+  </div>
+  
+  <div class="container" *ngIf="transaction">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Transacción {{ transaction.id }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="transaction-info">
+          Monto: {{ transaction.amount | currency:'USD':'symbol':'1.2-2' }} <br>
+          Fecha: {{ transaction.date | date:'yyyy-MM-dd' }} <br>
+          De: {{ transaction.fromAccount }} <br>
+          Para: {{ transaction.toAccount }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions class="card-actions">
+        <button mat-button class="primary-button" (click)="handleBack()">Regresar</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  
+  <div class="container" *ngIf="!transaction">
+    <p>Cargando detalles de la transacción...</p>
+  </div>
+  

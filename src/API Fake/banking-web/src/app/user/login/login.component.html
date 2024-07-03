@@ -1,0 +1,43 @@
+<div class="container py-5">
+    <h1 class="fw-bold text-center">Inicio de sesión</h1>
+  
+    <div class="row justify-content-center my-5">
+      <div class="col-md-6 col-lg-4">
+        <form [formGroup]="form" (ngSubmit)="login()">
+  
+          <mat-form-field class="mb-3 w-100" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" placeholder="Email" formControlName="email">
+  
+            <mat-error *ngIf="controlHasError('email', 'required')">
+              Este campo es obligatorio
+            </mat-error>
+            <mat-error *ngIf="controlHasError('email', 'email')">
+              Ingrese un email válido
+            </mat-error>
+          </mat-form-field>
+  
+          <mat-form-field class="mb-3 w-100" appearance="outline">
+            <mat-label>Contraseña</mat-label>
+            <input matInput type="password" placeholder="Contraseña" formControlName="password">
+  
+            <mat-error *ngIf="controlHasError('password', 'required')">
+              Este campo es obligatorio
+            </mat-error>
+          </mat-form-field>
+  
+          <button type="submit" class="w-100" mat-raised-button color="primary" [disabled]="form.invalid">
+            Ingresar
+          </button>
+  
+          <div class="mt-3 text-center">
+            Aún no tienes una cuenta?
+            <a class="ms-2" routerLink="/signup">
+              Regístrate aquí
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
