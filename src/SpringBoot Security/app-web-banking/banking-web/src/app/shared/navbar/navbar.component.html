@@ -1,0 +1,31 @@
+
+@if(user?.email){
+
+    <mat-toolbar color="primary">
+        <span>Banking</span>
+    
+        <button mat-button routerLink="/home" class="ms-3">
+            Inicio
+        </button>
+        
+        <button mat-button routerLink="/account" class="ms-3">
+            Cuentas Bancarias
+        </button>
+        
+       
+    
+        <span class="spacer"></span>
+    
+        <button mat-button [matMenuTriggerFor]="userMenu">
+            <mat-icon>account_circle</mat-icon> {{ user?.email}}
+        </button>
+    
+        <mat-menu #userMenu>
+            <button mat-menu-item (click)="logout()">
+                <mat-icon>logout</mat-icon> Cerrar sesión
+            </button>
+        </mat-menu>
+    
+    </mat-toolbar>
+}
+

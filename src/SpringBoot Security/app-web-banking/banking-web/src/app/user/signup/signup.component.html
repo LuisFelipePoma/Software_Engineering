@@ -1,0 +1,80 @@
+<div class="container py-5">
+    <h1 class="fw-bold text-center">Registro de usuario</h1>
+
+    <div class="row justify-content-center my-5">
+        <div class="col-md-6 col-lg-4">
+
+            <div class="mt-5 alert alert-danger" *ngIf="errors.length">
+                <ul>
+                    <li *ngFor="let error of errors">{{ error }}</li>
+                </ul>
+            </div>
+
+            <form class="mt-5" autocomplete="off" [formGroup]="form" (ngSubmit)="signup()">
+                <mat-form-field class="mb-2 w-100" appearance="outline">
+                    <mat-label>Nombres</mat-label>
+                    <input matInput type="text" placeholder="Nombres" formControlName="firstName">
+
+                    <mat-error *ngIf="controlHasError('firstName', 'required')">
+                        Este campo es obligatorio
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="mb-2 w-100" appearance="outline">
+                    <mat-label>Apellidos</mat-label>
+                    <input matInput type="text" placeholder="Apellidos" formControlName="lastName">
+
+                    <mat-error *ngIf="controlHasError('lastName', 'required')">
+                        Este campo es obligatorio
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="mb-2 w-100" appearance="outline">
+                    <mat-label>Correo electrónico</mat-label>
+                    <input matInput type="text" placeholder="Correo electrónico" formControlName="email">
+
+                    <mat-error>
+                        <ng-container *ngIf="controlHasError('email', 'required')">
+                            Este campo es obligatorio
+                        </ng-container>
+                        <ng-container *ngIf="controlHasError('email', 'pattern')">
+                            Ingrese un email válido
+                        </ng-container>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="mb-2 w-100" appearance="outline">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput [type]="passwordVisible ? 'text' : 'password'" placeholder="Contraseña"
+                        formControlName="password">
+
+                    <mat-icon matSuffix (click)="passwordVisible = !passwordVisible">
+                        {{ passwordVisible ? 'visibility_off' : 'visibility' }}
+                    </mat-icon>
+
+                    <mat-error>
+                        <ng-container *ngIf="controlHasError('password', 'required')">
+                            Este campo es obligatorio
+                        </ng-container>
+                        <ng-container *ngIf="controlHasError('password', 'minlength')">
+                            Ingrese una contraseña de al menos 4 caracteres.
+                        </ng-container>
+                    </mat-error>
+                </mat-form-field>
+
+                <div class="text-end">
+                    <button class="w-100" mat-raised-button color="primary">
+                        Registrarme
+                    </button>
+
+                    <div class="mt-3 text-center">
+                        ¿Ya tienes una cuenta?
+                        <a class="ms-2" routerLink="/">
+                            Inicia sesión
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
